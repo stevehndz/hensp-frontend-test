@@ -14,21 +14,27 @@ function App() {
       </div>
     </div>*/
 
-    <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route
-          path="/"
-          element={
-            localStorage.getItem('auth_token') ? (
-              <Home />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <div className="flex w-full h-screen justify-center">
+      <div className="w-full flex items-center justify-center">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/"
+              element={
+                localStorage.getItem('token') ? (
+                  <Home />
+                ) : (
+                  <Navigate to="/login" />
+                )
+              }
+            />
+            <Route path="/home" Component={Home}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </div>
+
   );
 }
 
