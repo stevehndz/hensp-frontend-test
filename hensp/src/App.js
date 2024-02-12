@@ -1,4 +1,7 @@
-import Form from "./components/Form";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./components/Login";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -10,8 +13,22 @@ function App() {
         <div className="w-full h-full bg-gradient-to-tr from-violet-500 to-pink-500"></div>
       </div>
     </div>*/
-    
-    Be
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={
+            localStorage.getItem('auth_token') ? (
+              <Home />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
