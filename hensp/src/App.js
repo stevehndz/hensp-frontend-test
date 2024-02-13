@@ -14,8 +14,8 @@ function App() {
       </div>
     </div>*/
 
-    <div className="flex w-full h-screen justify-center">
-      <div className="w-full flex items-center justify-center">
+    <div className="bg-gradient-to-tr from-indigo-500 to-emerald-500 flex w-full h-screen justify-center">
+      <div className=" w-full flex items-center justify-center">
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Login />} />

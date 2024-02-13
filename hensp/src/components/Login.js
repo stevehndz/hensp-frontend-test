@@ -36,7 +36,7 @@ export default function Login() {
     }
 
     return (
-        <div className='bg-white px-10 py-20 rounded-3xl border-2 border-gray-100'>
+        <div className='bg-white w-1/3 m-2 px-10 py-20 rounded-3xl border-2 border-gray-100'>
             <h1 className='text-5xl font-semibold'>Bienvenido</h1>
             <p className='font-medium text-lg text-gray-500 mt-4'>Inicia sesión con tus credenciales</p>
             <div className='mt-8'>
@@ -67,7 +67,8 @@ export default function Login() {
                     <div className='mt-8 flex flex-col gap-y-4'>
                         <button
                             type='submit'
-                            className='active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-2 rounded-xl bg-violet-500 text-white text-lg font-bold'>Ingresar</button>
+                            className='active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all durattion-75 py-2 rounded-xl
+                                bg-blue-500 hover:bg-blue-400 text-white text-lg font-bold'>Ingresar</button>
                     </div>
                 </form>
             </div>
